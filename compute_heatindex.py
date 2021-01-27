@@ -1,6 +1,6 @@
-from read_data import read_data
-from print import print_comparison
-from computation import compute_heatindex
+from mysci.read_data import read_data
+from mysci.print import print_comparison
+from mysci.computation import compute_heatindex
 
 # Column names and column indices to read
 columns = {"date": 0, "time": 1, "tempout": 2, "humout": 5, "heatindex": 13}
