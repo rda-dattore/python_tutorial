@@ -12,9 +12,11 @@ types = {"tempout": float, "windspeed": float, "windchill": float}
 data = read_data(columns, types=types)
 
 # compute wind chill index
-windchill = []
-for temperature, windspeed in zip(data["tempout"], data["windspeed"]):
-    windchill.append(compute_windchill(temperature, windspeed))
+#windchill = []
+#for temperature, windspeed in zip(data["tempout"], data["windspeed"]):
+#    windchill.append(compute_windchill(temperature, windspeed))
+# next line is previous three lines condensed
+windchill = [compute_windchill(temperature, windspeed) for temperature, windspeed in zip(data["tempout"], data["windspeed"])]
 
 # Output comparison of data
 print_comparison("WINDCHILL", data["date"], data["time"], data["windchill"], windchill)
