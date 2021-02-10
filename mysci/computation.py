@@ -60,7 +60,7 @@ def compute_dewpoint(temperature, humidity):
         humidity: The relative humidity in units of % (float)
     """
 
-    temp_C = (t - 32) * 5 / 9 # Convert temperature from deg F to deg C
+    temp_C = (temperature - 32) * 5 / 9 # Convert temperature from deg F to deg C
     rh = humidity / 100
 
     b = 18.678
